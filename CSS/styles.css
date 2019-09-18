@@ -1,4 +1,244 @@
-.bg-dark {
-  /*color: #333 !important;*/
-  background-color: #e75480 !important;
+/* Menu */
+.bg {
+  background-image: url("../images/background.JPG") !important;
+  background-size: cover;
+}
+.title{
+  /* width: 100%; */
+  color: white;
+  text-align: center;
+}
+body {
+    padding: 0;
+    font-size: 100%;
+    font-family: 'Dangrek';
+}
+html{
+    box-sizing: border-box;
+}
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+.textbox {
+  position: relative;
+  z-index:1;
+  width: 60%;
+  text-align: center;
+  background-color: white !important;
+  padding: 1em;
+  font-size: 1.8em;
+  margin: auto;
+  border-radius: 45px;
+}
+.image_aside{
+  width: 45%;
+  background-color: white !important;
+  padding: 1em;
+  border-radius: 45px;
+  margin: 1em auto;
+  float: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0px;
+}
+.large_gallery {
+    display: grid;
+    grid-gap: 0px;
+}
+img {
+  max-width: 100%;
+  /* vertical-align: middle; */
+}
+.rotate_image{
+  /* -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg); */
+  transform: rotate(90deg);
+  margin-top: 100px;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.masonry {
+  padding: auto;
+  max-width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+.item {
+    background: #fff;
+    padding: 1em;
+    margin: 0 0 1.5em;
+    border-radius: 45px;
+    
+}
+.item_description {
+    margin: auto;
+    padding: 1.5rem;
+    font-size: .75rem;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+    position: relative;
+}
+
+/* relevant styles */
+.img_wrap {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.img_description {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+  background-color: rgba(0, 0, 255, 0.137);
+  font-weight: bold;
+  /* font-size: 2em; */
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img_wrap:hover{
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, .3));
+}
+.img_wrap:hover .img_description {
+  visibility: visible;
+  opacity: 1;
+}
+
+aside, article, .article_small {
+
+  text-align: center;
+  background-color: white !important;
+  padding: 1em;
+  font-size: 1.5em;
+  border-radius: 45px;
+
+}
+section{
+  margin: 0 1em 1em;
+  padding: 1em;
+
+}
+
+aside{
+  line-height:2;
+  font-size: 1.3em;
+}
+
+article{
+
+  font-style: italic;
+  font-size: 2em;
+  text-align: center;
+}
+.article_small{
+  font-size: 1.2em;
+  text-align: left;
+
+}
+.textbox2{
+    z-index: 1000 !important;
+    width: 100%;
+    background-color: transparent;
+    
+}
+
+.circle-img{
+  border-radius:50%;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+    .masonry {
+        column-count: 3;
+    }
+    aside, article, .article_small{
+        margin: inherit;
+        width: 45%;
+    }
+    section {
+      display:flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+    aside{
+      flex:2.5;
+    }
+    article, .article_small{
+        flex: 2.5;
+        flex: 2.5;
+    }
+    .large_gallery {
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+    html{
+      font-size: larger !important;
+    }
+    .masonry {
+        column-count: 2;
+    }
+    aside, article, .article_small{
+        margin: 0 auto;
+        width:70%;
+    }
+    .large_gallery {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 540px) {
+    html{
+      font-size: larger !important;
+    }
+    .masonry {
+        column-count: 1;
+    }
+    aside, article, .article_small{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .large_gallery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(25, 1fr);
+    }
+}
+@media only screen and (max-width: 539px) and (min-width: 0px) {
+    html{
+      font-size: larger !important;
+    }
+    .masonry {
+        column-count: 1;
+    }
+    aside, article, .article_small{
+        margin: 0 auto;
+        width:90%;
+    }
+    .large_gallery {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(50, 1fr);
+    }
 }
