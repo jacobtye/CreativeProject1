@@ -1,4 +1,5 @@
 /* Menu */
+@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');
 .bg {
   background-image: url("../images/background.JPG") !important;
   background-size: cover;
@@ -8,15 +9,22 @@
   text-align: right;
 }
 body {
+    font-family: 'Chilanka' !important;  
     padding: 0;
     font-size: 100%;
-    font-family: 'Dangrek';
+    /*font-family: 'Dangrek';*/
 }
 html{
     box-sizing: border-box;
 }
 ul {
     list-style-position: inside;
+}
+ol {
+  list-style-position: inside;
+}
+.indent{
+  margin-left: 5em;
 }
 .textbox {
   position: relative;
@@ -80,8 +88,8 @@ img {
 .masonry {
   padding: auto;
   max-width: 100%;
-  margin-right: 0;
-  margin-left: 0;
+  margin-right: .5em;
+  margin-left: .5em;
   margin-bottom: 0;
   -webkit-column-break-inside: avoid;
   page-break-inside: avoid;
@@ -90,7 +98,7 @@ img {
 .item {
     background: #fff;
     padding: 1em;
-    margin: 0 0 1.5em;
+    margin: .5em .5em 1.5em;
     border-radius: 45px;
     -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
@@ -209,7 +217,10 @@ img.center {
 .navbar{
   text-align: right;
 }
-
+footer{
+  background-color: #e75480;
+  text-align: center;
+}
 @media only screen and (min-width: 1024px) {
     .title{
      width: 55%;
