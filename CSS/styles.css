@@ -68,6 +68,8 @@ img {
 }
 .img_img{
   max-height: 20em;
+  border-radius:15%;
+  overflow: hidden;
 }
 #images {
   text-align:center;
